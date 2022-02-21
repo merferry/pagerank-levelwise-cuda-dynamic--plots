@@ -14,7 +14,7 @@ set termoption dashed
 set datafile separator ','
 set style fill solid border lt -1
 set style textbox opaque noborder
-set boxwidth 0.25 abs
+set boxwidth 0.20 abs
 set xtics rotate by 45 right
 set grid y
 set grid xtics
@@ -24,6 +24,7 @@ set ylabel 'Runtime (ms)'
 
 # set title 'AM time for all batch sizes (omp)' offset 0,-0.8
 plot 'data.csv' \
-      using ($1-0.25):7  title 'Dynamic Monolithic' with boxes fill pattern 1, \
-  ''  using 1:13:xtic(2) title 'Dynamic Levelwise'  with boxes fill pattern 2, \
-  ''  using ($1+0.25):11 title 'Static Levelwise'   with boxes fill pattern 3
+      using ($1-0.20):7  title 'Dynamic Monolithic'      with boxes fill pattern 1, \
+  ''  using 1:13:xtic(2) title 'Dynamic Levelwise'       with boxes fill pattern 2, \
+  ''  using ($1+0.20):19 title 'Dynamic HyPR (Pure CPU)' with boxes fill pattern 3, \
+  ''  using ($1+0.40):11 title 'Static Levelwise'        with boxes fill pattern 3
