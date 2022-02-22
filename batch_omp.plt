@@ -7,86 +7,23 @@
 # set key autotitle columnhead
 # plot [500:10000] 'data/arabic-2005.csv'
 set term pdf
-set terminal pdf size 10in,6in
+set terminal pdf size 5in,3in
 set output 'output.pdf'
 
 set termoption dashed
 set datafile separator ','
-set key off
-
-
-set logscale x 10
+set style fill solid border lt -1
+set style textbox opaque noborder
+set boxwidth 0.20 abs
+set xtics rotate by 45 right
+set grid y
+set key above font ",8"
 set logscale y 10
-set grid xtics
-set xtics (500, 1000, 2000, 5000, 10000)
-set style line 1 linetype 1 linewidth 3 pointtype 2 pointsize 1
-set style line 2 linetype 2 linewidth 3 pointtype 5 pointsize 1
-# set label 1 at screen 0.50, screen -0.02 'Batch size' center font ',16'
-# set label 2 at screen 0.01, screen 0.50 rotate left 'Runtime (ms)' center font ',16'
+set ylabel 'Speedup'
 
-set multiplot layout 3,4
-
-set title 'arabic-2005' offset 0,-0.8
-plot [500:10000] 'data/arabic-2005.csv' \
-      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-set title 'uk-2005'
-plot [500:10000] 'data/uk-2005.csv' \
-      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-set title 'it-2004'
-plot [500:10000] 'data/it-2004.csv' \
-      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-set title 'soc-Epinions1'
-plot [500:10000] 'data/soc-Epinions1.csv' \
-      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-set title 'soc-LiveJournal1'
-plot [500:10000] 'data/soc-LiveJournal1.csv' \
-      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-set title 'wiki-Talk'
-plot [500:10000] 'data/wiki-Talk.csv' \
-      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-set title 'cit-Patents'
-plot [500:10000] 'data/cit-Patents.csv' \
-      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-set title 'coPapersDBLP'
-plot [500:10000] 'data/coPapersDBLP.csv' \
-      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-set title 'amazon-2008'
-plot [500:10000] 'data/amazon-2008.csv' \
-      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-set title 'italy\_osm'
-plot [500:10000] 'data/italy_osm.csv' \
-      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-set title 'Linux\_call\_graph'
-plot [500:10000] 'data/Linux_call_graph.csv' \
-      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-set key center center
-set border 0
-unset tics
-unset title
-set yrange [0:1]
-plot 2 t 'Dynamic Monolithic' linestyle 1 with linespoints, \
-     2 t 'Dynamic Levelwise'  linestyle 2 with linespoints
-
-unset multiplot
+# set title 'AM time for all batch sizes (omp)' offset 0,-0.8
+plot 'data.csv' \
+      using ($1-0.20):8  title '500'   with boxes fill pattern 3, \
+  ''  using 1:9:xtic(2)  title '1000'  with boxes fill pattern 3, \
+  ''  using ($1+0.20):10 title '5000'  with boxes fill pattern 3, \
+  ''  using ($1+0.40):11 title '10000' with boxes fill pattern 3
