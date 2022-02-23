@@ -30,89 +30,89 @@ set multiplot layout 3,4
 
 set title 'arabic-2005' offset 0,-0.8
 plot [500:10000] 'data/arabic-2005.csv' \
-      using 1:6  title 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-  ''  using 1:18 title 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-  ''  using 1:10 title 'Static Levelwise'        linestyle 4 with linespoints
+      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
+  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+  ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+  ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'uk-2005'
 plot [500:10000] 'data/uk-2005.csv' \
-      using 1:6  title 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-  ''  using 1:18 title 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-  ''  using 1:10 title 'Static Levelwise'        linestyle 4 with linespoints
+      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
+  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+  ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+  ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'it-2004'
 plot [500:10000] 'data/it-2004.csv' \
-      using 1:6  title 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-  ''  using 1:18 title 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-  ''  using 1:10 title 'Static Levelwise'        linestyle 4 with linespoints
+      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
+  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+  ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+  ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'soc-Epinions1'
 plot [500:10000] 'data/soc-Epinions1.csv' \
-      using 1:6  title 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-  ''  using 1:18 title 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-  ''  using 1:10 title 'Static Levelwise'        linestyle 4 with linespoints
+      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
+  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+  ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+  ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'soc-LiveJournal1'
 plot [500:10000] 'data/soc-LiveJournal1.csv' \
-      using 1:6  title 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-  ''  using 1:18 title 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-  ''  using 1:10 title 'Static Levelwise'        linestyle 4 with linespoints
+      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
+  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+  ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+  ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'wiki-Talk'
 plot [500:10000] 'data/wiki-Talk.csv' \
-      using 1:6  title 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-  ''  using 1:18 title 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-  ''  using 1:10 title 'Static Levelwise'        linestyle 4 with linespoints
+      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
+  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+  ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+  ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'cit-Patents'
 plot [500:10000] 'data/cit-Patents.csv' \
-      using 1:6  title 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-  ''  using 1:18 title 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-  ''  using 1:10 title 'Static Levelwise'        linestyle 4 with linespoints
+      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
+  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+  ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+  ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'coPapersDBLP'
 plot [500:10000] 'data/coPapersDBLP.csv' \
-      using 1:6  title 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-  ''  using 1:18 title 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-  ''  using 1:10 title 'Static Levelwise'        linestyle 4 with linespoints
+      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
+  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+  ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+  ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'amazon-2008'
 plot [500:10000] 'data/amazon-2008.csv' \
-      using 1:6  title 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-  ''  using 1:18 title 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-  ''  using 1:10 title 'Static Levelwise'        linestyle 4 with linespoints
+      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
+  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+  ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+  ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'italy\_osm'
 plot [500:10000] 'data/italy_osm.csv' \
-      using 1:6  title 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-  ''  using 1:18 title 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-  ''  using 1:10 title 'Static Levelwise'        linestyle 4 with linespoints
+      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
+  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+  ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+  ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'Linux\_call\_graph'
 plot [500:10000] 'data/Linux_call_graph.csv' \
-      using 1:6  title 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-  ''  using 1:12 title 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-  ''  using 1:18 title 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-  ''  using 1:10 title 'Static Levelwise'        linestyle 4 with linespoints
+      using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
+  ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+  ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+  ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set key center center
 set border 0
 unset tics
 unset title
 set yrange [0:1]
-plot 2 t 'Dynamic Monolithic'      linestyle 1 with linespoints, \
-     2 t 'Dynamic Levelwise'       linestyle 2 with linespoints, \
-     2 t 'Dynamic HyPR (Pure CPU)' linestyle 3 with linespoints, \
-     2 t 'Static Levelwise'        linestyle 4 with linespoints
+plot 2 t 'Dynamic Monolithic' linestyle 1 with linespoints, \
+     2 t 'Dynamic Levelwise'  linestyle 2 with linespoints, \
+     2 t 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
+     2 t 'Static Levelwise'   linestyle 4 with linespoints
 
 unset multiplot
