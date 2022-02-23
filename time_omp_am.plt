@@ -25,7 +25,7 @@ set ylabel 'Runtime (ms)'
 plot 'data.csv' \
       using ($1-0.20):7  title 'Dynamic Monolithic' with boxes fill pattern 1, \
   ''  using 1:13:xtic(2) title 'Dynamic Levelwise'  with boxes fill pattern 2, \
-  ''  using ($1+0.20):19 title 'Dynamic HyPR (CPU)' with boxes fill pattern 3, \
-  ''  using ($1+0.40):11 title 'Static Levelwise'   with boxes fill pattern 3, \
-  ''  using ($1+0.20):(0.9*$19):21 title '' with labels font ",7" rotate right, \
-  ''  using ($1+0.40):(0.9*$11):20 title '' with labels font ",7" rotate right
+  ''  using ($1+0.20):19 title 'Dynamic HyPR (CPU)' with boxes fill pattern 3 noborder, \
+  ''  using ($1+0.40):11 title 'Static Levelwise'   with boxes fill pattern 3 noborder, \
+  ''  using ($1+0.20):(0.9*$19):21 title '' with labels font ",12" rotate right, \
+  ''  using ($1+0.40):(0.9*$11):20 title '' with labels font ",12" rotate right
