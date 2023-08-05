@@ -1,14 +1,6 @@
-# set termoption linewidth 3
-# set style line 1 lc rgb '#0060ad' lt 1 lw 2 pt 5 ps 5.5   # blue
-# set style line 2 lc rgb '#dd181f' lt 1 lw 2 pt 7 ps 1.5   # red
-# do for [i=1:100] {
-#   set style line i linewidth 30
-# }
-# set key autotitle columnhead
-# plot [500:10000] 'data/arabic-2005.csv'
 set term pdf
 set terminal pdf size 10in,6in
-set output 'output.pdf'
+set output 'time-omp-all.pdf'
 
 set termoption dashed
 set datafile separator ','
@@ -29,77 +21,77 @@ set style line 4 linetype 6 linewidth 3 pointtype 9 pointsize 1 dashtype 2
 set multiplot layout 3,4
 
 set title 'arabic-2005' offset 0,-0.8
-plot [500:10000] 'data/arabic-2005.csv' \
+plot [500:10000] 'time-all/arabic-2005.csv' \
       using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
   ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
   ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
   ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'uk-2005'
-plot [500:10000] 'data/uk-2005.csv' \
+plot [500:10000] 'time-all/uk-2005.csv' \
       using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
   ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
   ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
   ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'it-2004'
-plot [500:10000] 'data/it-2004.csv' \
+plot [500:10000] 'time-all/it-2004.csv' \
       using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
   ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
   ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
   ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'soc-Epinions1'
-plot [500:10000] 'data/soc-Epinions1.csv' \
+plot [500:10000] 'time-all/soc-Epinions1.csv' \
       using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
   ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
   ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
   ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'soc-LiveJournal1'
-plot [500:10000] 'data/soc-LiveJournal1.csv' \
+plot [500:10000] 'time-all/soc-LiveJournal1.csv' \
       using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
   ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
   ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
   ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'wiki-Talk'
-plot [500:10000] 'data/wiki-Talk.csv' \
+plot [500:10000] 'time-all/wiki-Talk.csv' \
       using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
   ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
   ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
   ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'cit-Patents'
-plot [500:10000] 'data/cit-Patents.csv' \
+plot [500:10000] 'time-all/cit-Patents.csv' \
       using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
   ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
   ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
   ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'coPapersDBLP'
-plot [500:10000] 'data/coPapersDBLP.csv' \
+plot [500:10000] 'time-all/coPapersDBLP.csv' \
       using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
   ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
   ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
   ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'amazon-2008'
-plot [500:10000] 'data/amazon-2008.csv' \
+plot [500:10000] 'time-all/amazon-2008.csv' \
       using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
   ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
   ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
   ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'italy\_osm'
-plot [500:10000] 'data/italy_osm.csv' \
+plot [500:10000] 'time-all/italy_osm.csv' \
       using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
   ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
   ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \
   ''  using 1:10 title 'Static Levelwise'   linestyle 4 with linespoints
 
 set title 'Linux\_call\_graph'
-plot [500:10000] 'data/Linux_call_graph.csv' \
+plot [500:10000] 'time-all/Linux_call_graph.csv' \
       using 1:6  title 'Dynamic Monolithic' linestyle 1 with linespoints, \
   ''  using 1:12 title 'Dynamic Levelwise'  linestyle 2 with linespoints, \
   ''  using 1:18 title 'Dynamic HyPR (CPU)' linestyle 3 with linespoints, \

@@ -2,11 +2,6 @@
 *.pdf
 *.png
 
-# Data
-data/
-*.zip
-*.csv
-
 # Logs
 logs
 *.log
