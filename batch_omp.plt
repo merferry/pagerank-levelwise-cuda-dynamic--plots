@@ -9,7 +9,7 @@ set style textbox opaque noborder
 set boxwidth 0.20 abs
 set xtics rotate by 45 right
 set grid y
-set key above font ",8"
+set key above font ",12"
 set logscale y 10
 set ylabel 'Speedup'
 
